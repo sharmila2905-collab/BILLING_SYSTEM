@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple JS Bill</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="1-js-bill.css">
+    <script async src="2-js-bill.js"></script>
+  </head>
+  <body>
+    <!-- (A) ADD ITEM -->
+    <div id="billAdd" class="mi">add_circle_outline</div>
+
+    <!-- (B) BILL ITEMS -->
+    <div id="billItems"></div>
+    <datalist id="itemList"></datalist>
+    <template id="itemRow">
+    <div class="row">
+      <input type="number" class="qty" min="1" placeholder="Qty">
+      <input type="text" class="item" list="itemList" placeholder="Item Name">
+      <input type="number" class="price" min="0.00" step="0.01" placeholder="Price EA">
+      <input type="button" class="del mi" value="clear">
+    </div>
+    </template>
+
+    <!-- (C) BILL TOTAL -->
+    <div id="billTotal">
+      <div id="billTotalAmt">$0</div>
+      <input type="button" id="billPrint" class="mi" value="print" disabled>
+    </div>
+  </body>
+</html>
